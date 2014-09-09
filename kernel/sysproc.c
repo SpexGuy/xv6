@@ -88,3 +88,14 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+int
+sys_addnum(void)
+{
+. static int counter = 0;
+  int addition;
+  if (argint(0, &addition) < 0)
+    return -1;
+  counter += addition;
+  return counter;
+}

@@ -2,6 +2,7 @@
 #define _SYSFUNC_H_
 
 // System call handlers
+int sys_addnum(void);
 int sys_chdir(void);
 int sys_close(void);
 int sys_dup(void);
